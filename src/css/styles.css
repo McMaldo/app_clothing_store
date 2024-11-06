@@ -11,6 +11,11 @@
 }
 body{
   width: 100%;
+  background-image: url(../../public/img/bg.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   #root{
     width: 100%;
     min-height: 100vh;
@@ -639,20 +644,26 @@ main.signin, main.signup{
     object-position: center;
   }
   .login__form {
+    width: 100%;
+    max-width: 420px;
     position: relative;
     margin-inline: 1.5rem;
     background-color: hsla(0, 0%, 100%, .01);
     border: 2px solid hsla(0, 0%, 100%, .7);
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 1.5rem;
     color: #fff;
     border-radius: 1rem;
     backdrop-filter: blur(7px);
     background: rgba(37, 38, 43, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .login__inputs, .login__box {
     display: grid;
   }
   .login__inputs {
+    width: 100%;
     row-gap: 1.25rem;
     margin-bottom: 1rem;
   }
@@ -682,10 +693,11 @@ main.signin, main.signup{
   }
   .login__check, .login__check-box {
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
   .login__check {
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 1rem;
     font-size: .8em;
     .login__check-box {
@@ -723,17 +735,6 @@ main.signin, main.signup{
   }
   .login__register a:hover {
     text-decoration: underline;
-  }
-  /*=============== BREAKPOINTS ===============*/
-  /* For medium devices */
-  @media screen and (min-width: 576px) {
-    .login {
-      justify-content: center;
-    }
-    .login__form {
-      width: 420px;
-      padding-inline: 2.5rem;
-    }
   }
 }
 footer{
@@ -789,13 +790,6 @@ footer{
 	}
 }
 @media (min-width: 800px) {
-  body{
-    background-image: url(../../public/img/bg.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
   #root{
     display: flex;
     flex-direction: column;
